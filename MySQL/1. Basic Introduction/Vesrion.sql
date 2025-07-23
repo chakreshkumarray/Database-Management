@@ -1,1 +1,1 @@
-select vesrion();
+select version();
