@@ -1,0 +1,5 @@
+create database colleges_vbspu;
+show databases;
+use school_db;
+select database();
+drop database college_vbspu;
