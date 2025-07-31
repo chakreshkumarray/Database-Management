@@ -1,1 +1,7 @@
-"E:\Database Management\MongoDB\1. Basic\MongoDBTutorial.students.json"
+[{
+  "_id": {
+    "$oid": "6883afee8c3910bbd7d17faa"
+  },
+  "name": "Ram",
+  "age": 1
+}]
