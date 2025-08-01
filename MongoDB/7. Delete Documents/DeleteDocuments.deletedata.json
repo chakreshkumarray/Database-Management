@@ -1,1 +1,202 @@
-"E:\Database Management\MongoDB\7. Delete Documents\DeleteDocuments.deletedata.json"
+[{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69632"
+  },
+  "name": "Bob Smith",
+  "age": 32
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69633"
+  },
+  "name": "Carol Davis",
+  "age": 28
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69634"
+  },
+  "name": "David Wilson",
+  "age": 35
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69635"
+  },
+  "name": "Emma Brown",
+  "age": 22
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69636"
+  },
+  "name": "Frank Miller",
+  "age": 41
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69637"
+  },
+  "name": "Grace Lee",
+  "age": 29
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69639"
+  },
+  "name": "Ivy Chen",
+  "age": 26
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6963a"
+  },
+  "name": "Jack Anderson",
+  "age": 38
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6963b"
+  },
+  "name": "Kate Thompson",
+  "age": 11
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6963c"
+  },
+  "name": "Liam Garcia",
+  "age": 24
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6963d"
+  },
+  "name": "Maya Patel",
+  "age": 27
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6963e"
+  },
+  "name": "Noah Rodriguez",
+  "age": 36
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69640"
+  },
+  "name": "Paul White",
+  "age": 42
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69641"
+  },
+  "name": "Quinn Lewis",
+  "age": 30
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69642"
+  },
+  "name": "Ruby Clark",
+  "age": 34
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69643"
+  },
+  "name": "Sam Walker",
+  "age": 28
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69644"
+  },
+  "name": "Tara Hall",
+  "age": 25
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69645"
+  },
+  "name": "Uma Singh",
+  "age": 11
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69646"
+  },
+  "name": "Victor Kim",
+  "age": 31
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69647"
+  },
+  "name": "Wendy Liu",
+  "age": 26
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69648"
+  },
+  "name": "Xavier Costa",
+  "age": 37
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c69649"
+  },
+  "name": "Yuki Tanaka",
+  "age": 29
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6964a"
+  },
+  "name": "Zoe Parker",
+  "age": 33
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6964b"
+  },
+  "name": "Adam Foster",
+  "age": 40
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6964c"
+  },
+  "name": "Bella Cooper",
+  "age": 24
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6964d"
+  },
+  "name": "Chris Reed",
+  "age": 35
+},
+{
+  "_id": {
+    "$oid": "68859f5c45f43a9fb6c6964e"
+  },
+  "name": "Diana Moore",
+  "age": 27
+},
+{
+  "_id": {
+    "$oid": "6885a23945f43a9fb6c6964f"
+  },
+  "name": "Chakresh",
+  "Education": {
+    "Degree": "B.Tech",
+    "Department": "IT",
+    "Year": 4
+  },
+  "DOB": "01-01-2003",
+  "Address": "Sultanpur Up"
+}]
