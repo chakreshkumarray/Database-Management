@@ -1,3 +1,4 @@
+create database my_database;
 USE my_database;
 CREATE TABLE products(
 Product_id INT AUTO_INCREMENT PRIMARY KEY,
