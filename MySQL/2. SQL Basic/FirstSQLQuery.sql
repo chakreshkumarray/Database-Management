@@ -10,7 +10,7 @@ VALUES ('laptop',9999.45),
 	('headphone',7664.45),
     ('Moniter',193.9);
 
-select*from products;    
+select * from products;    
 SELECT Product_id,Product_name,Price
 FROM products
 ORDER BY Price DESC;
