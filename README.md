@@ -1,2 +1,2 @@
-# RDBMS -> SQL -> MySQL 
-# NoSQL -> MongoDB 
+ RDBMS -> SQL -> MySQL 
+ NoSQL -> MongoDB 
