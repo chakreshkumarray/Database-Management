@@ -1,7 +1,0 @@
-create database DataTypes;
-use DataTypes;
-
-create table typesdata(
-type_id bool,
-type_cid boolean
-);
