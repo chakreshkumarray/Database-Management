@@ -1,7 +1,0 @@
-CREATE DATABASE SchoolDB;
-USE SchoolDB;
-CREATE TABLE Students(
-Student_id INT PRIMARY KEY,
-FirstName VARCHAR(50),
-LastName VARCHAR(50),
-EnrolledDate DATE);
