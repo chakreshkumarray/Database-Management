@@ -43,5 +43,3 @@ modify department_id INT not null;
 alter table employees drop column department_id;   
 
 alter table employees add foreign key (department_id) references departments(department_id);
-
-
