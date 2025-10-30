@@ -10,10 +10,9 @@ and includes examples ranging from basic to advanced sorting concepts.
 
 CREATE DATABASE db12;
 USE db12;
-select database();
 
 -- Create a products table with various data types
-CREATE TABLE product(
+CREATE TABLE products(
 product_id INT PRIMARY KEY,
 product_name VARCHAR(100),
 category VARCHAR(50),
@@ -23,7 +22,7 @@ last_updated TIMESTAMP
 );
 
 -- Insert initial sample data
-INSERT INTO product(product_id,product_name,category,price,stock_quantity,last_updated)
+INSERT INTO products(product_id,product_name,category,price,stock_quantity,last_updated)
 VALUES(1, 'Laptop Pro', 'Electronics', 1299.99, 50, '2024-01-15 10:00:00'),
 	  (2, 'Desk Chair', 'Furniture', 199.99, 30, '2024-01-16 11:30:00'),
       (3, 'Coffee Maker', 'Appliances', 79.99, 100, '2024-01-14 09:15:00'),
@@ -33,55 +32,59 @@ VALUES(1, 'Laptop Pro', 'Electronics', 1299.99, 50, '2024-01-15 10:00:00'),
 -- Section 2: Basic Sorting Operations
 -- ---------------------------------
 -- Display all records (unsorted)      
-select * from product;
+select * from products;
 
 -- Sort by price in ascending order (ASC is optional as it's the default)
-select * from product order by price;
-select * from product order by price asc;
-select * from product order by category;
+select * from products order by price;
+select * from products order by price asc;
+select * from products order by category;
 
 -- Sort by last updated timestamp
-select * from product order by  last_updated;
+select * from products order by  last_updated;
 
 -- Section 3: Advanced Sorting Techniques
 -- ------------------------------------
 -- Multiple column sorting (sort by category descending, then price descending)
-select * from product order by category desc , price desc;
+select * from products order by category desc , price desc;
 
 -- Sort using column position (4 represents the price column)
-select * from product order by 4;
+select * from products order by 4;
 
 -- Combining WHERE clause with ORDER BY
-select * from product where category = "Electronics" order by price;
+select * from products where category = "Electronics" order by price;
 
 -- Case-sensitive sorting using BINARY
-select * from product order by binary category;
+select * from products order by binary category;
 
 -- Section 4: Function-Based Sorting
 -- -------------------------------
 -- Sort by product name length
-select * from product order by length(product_name);
+select * from products order by length(product_name);
 
 -- Sort by day of the month from timestamp
-select * from product order by day(last_updated); 
+select * from products order by day(last_updated); 
 
 -- Using Limit with order by to find highest stock quantity
-select * from product order by stock_quantity desc limit 1;
+select * from products order by stock_quantity desc limit 1;
 
 -- Section 5: Custom Sorting Orders
 -- -----------------------------
 -- Default category sorting
-select * from product order by category;
+select * from products order by category;
 
 -- Custom category order using FIELD function
-SELECT * FROM product ORDER BY FIELD(category, 'Electronics','Appliances','Furniture'), price DESC;
+SELECT * FROM products ORDER BY FIELD(category, 'Electronics','Appliances','Furniture'), price DESC;
 
 -- Section 6: Complex Sorting with Conditions
 -- ---------------------------------------
 -- Simple conditional sorting for low stock and high price items
+select * from products order by stock_quantity <= 50 ;
+select * from products order by (stock_quantity <= 50 and price >= 200);
+select * from products order by (stock_quantity <= 50 and price >= 200) desc;
+select *, stock_quantity <= 50 and price >= 200 from products order by (stock_quantity <= 50 and price >= 200) desc;
 select*,
 stock_quantity <= 50 and price >= 200 as priority_flag
-from product order by (stock_quantity <= 50 and price >= 200) desc;
+from products order by (stock_quantity <= 50 and price >= 200) desc;
 
 -- Advanced priority - based sorting using case
 SELECT *,
@@ -90,23 +93,24 @@ SELECT *,
         WHEN stock_quantity <= 50 THEN 2
         ELSE 3
     END AS priority 
-FROM product 
+FROM products
 ORDER BY priority;
 
 -- Section 7: Handling NULL Values
 -- ----------------------------
 -- Add records with NULL values for demonstration
-INSERT INTO product VALUES
+INSERT INTO products VALUES
 (6, 'Desk Lamp', 'Furniture', NULL, 45, '2024-01-18 13:25:00'),
 (7, 'Keyboard', 'Electronics', 89.99, NULL, '2024-01-19 15:10:00');
 
 -- Basic NULL handling in ORDER BY
-SELECT * FROM product ORDER BY price;
+SELECT * FROM products ORDER BY price;
+SELECT * FROM products ORDER BY price is null;
 
 -- Explicit NULL handling
 SELECT *, 
     price IS NULL
-FROM product 
+FROM products 
 ORDER BY price IS NULL;
 
 -- Section 8: Working with Calculated Columns
@@ -114,15 +118,15 @@ ORDER BY price IS NULL;
 -- Sort by total value (price * quantity)
 SELECT *, 
     price * stock_quantity AS total_value 
-FROM product
+FROM products
 ORDER BY total_value DESC;
 
 -- Section 9: Query Performance Analysis
 -- ---------------------------------
 -- Examine query execution plan for multi-column sort
-EXPLAIN SELECT * FROM product
+EXPLAIN SELECT * FROM products
 ORDER BY category, price;
 
 -- Compare with primary key sort performance
-EXPLAIN SELECT * FROM product 
+EXPLAIN SELECT * FROM products 
 ORDER BY product_id;
