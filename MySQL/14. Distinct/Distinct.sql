@@ -1,7 +1,5 @@
 create database EmployeeDB;
 use EmployeeDB;
-select database();
-show databases;
 
 create table employees(
 id int auto_increment primary key,
@@ -9,6 +7,7 @@ name varchar(50),
 department varchar(50),
 salary decimal(10,2)
 );
+
 INSERT INTO employees (name, department, salary) 
 VALUES
     ('Alice', 'HR', 50000),
@@ -18,6 +17,7 @@ VALUES
     ('David', 'Finance', 55000),
     ('Eve', 'IT', 70000),        -- Duplicate salary
     ('Frank', 'HR', 50000);      -- Duplicate department & salary
+    
 -- View all employees 
 select * from employees;    
 
@@ -31,7 +31,7 @@ select distinct department,salary from employees;
 
 -- Example 3: Using DISTINCT with aggregate functions
 -- Count number of unique departments
-SELECT COUNT(DISTINCT department) AS unique_departments ;
+SELECT COUNT(DISTINCT department) AS unique_departments from employees;
 
 -- Example 4: Using DISTINCT with string functions
 -- Get unique name-department combinations
@@ -57,4 +57,3 @@ INSERT INTO employees (name, department, salary)
 
 -- Show how DISTINCT handles NULL values
 select distinct department from employees;    
-
