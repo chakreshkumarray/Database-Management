@@ -45,7 +45,7 @@ select lower(first_name) from employees;
 select first_name, upper(first_name) as 'Upper Case' ,first_name,lower(first_name) as 'Lower Case' from employees;
 
 -- TRIM: Remove leading and trailing spaces
-select trim('        ok         ')as 'remove space';
+select trim('        ok         ') as 'remove space';
 
 -- SUBSTRING: Extract the first three characters of first names
 select substring(first_name,1,3) from employees;
