@@ -5,7 +5,6 @@
 -- Create and use the database
 create database db16;
 use db16;
-select database();
 
 -- create employees table
 create table employees(
@@ -29,12 +28,12 @@ select concat(first_name,' ',last_name) as 'Full Name' from employees;
 
 -- create departemnt table
 create table departments(
-dep_id int primary key,
-dep_name varchar(50),
+dept_id int primary key,
+dept_name varchar(50),
 location varchar(50)
 );
 -- insert records in department table
-insert into departments(dep_id,dep_name,location)
+insert into departments(dept_id,dept_name,location)
 values (1, 'Engineering', 'New York'),
        (2, 'Marketing', 'Los Angeles'),
        (3, 'Finance', 'Chicago');
@@ -49,10 +48,10 @@ alter table employees add column departments_id int;
 SELECT 
     e.first_name,
     e.last_name,
-    d.dep_name 
+    d.dept_name 
 FROM employees AS e 
 JOIN departments AS d 
-    ON e.department_id = d.dep_id;
+    ON e.departments_id = d.dept_id;
 
 -- Using aliases in subqueries
 SELECT avg_salary.average_salary
