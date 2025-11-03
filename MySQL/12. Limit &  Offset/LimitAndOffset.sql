@@ -6,7 +6,6 @@
 
 create database db13;
 use db13;
-select database();
 
 -- Create products table
 create table products(
@@ -32,12 +31,13 @@ VALUES
 
 -- Print all records
 select * from products;
+select * from products limit 2;
 
 -- Return first two products
 select * from products order by id limit 2;
 
 -- 3. LIMIT with OFFSET
--- Syntax 1: LIMIT [row_count] OFFSET [offset]
+-- Syntax 1: LIMIT [row_count] OFFSET [offset] skip 2 row
 SELECT * FROM products ORDER BY id LIMIT 2 OFFSET 2;
 -- Syntax 2: LIMIT [offset], [row_count]
 SELECT * FROM products ORDER BY id LIMIT 2, 2;
@@ -65,6 +65,8 @@ select * from products limit 6,3;
 -- Top 3 most expensive products
 select * from products order by price desc limit 3;
 -- Get 5 random products
+select * from products limit 5;
+select * from products order by id limit 5;
 select * from products order by rand() limit 5;
 
 -- 6. Performance Considerations
