@@ -5,8 +5,8 @@
 
 -- Database Setup
 -- =============================================
-create database dbForGroupBy;
-use dbForGroupBy;
+create database DBForGroupBy;
+use DBForGroupBy;
 select database();
 
 create table employees(
@@ -16,6 +16,7 @@ department varchar(50),
 salary decimal(10,2),
 joining_date date
 );
+
 -- Initial Data Insertion
 -- =============================================
 insert into employees(name,department,salary,joining_date)
@@ -28,12 +29,14 @@ values
 ('Frank', 'Finance', 60000, '2020-11-05'),
 ('Grace', 'Finance', 65000, '2019-05-30'),
 ('Hannah', 'Finance', 62000, '2021-01-12');
+
 -- Additional Data Insertion
 -- =============================================
 INSERT INTO employees (name, department, salary, joining_date) 
 VALUES
 ('Tim', 'HR', 65000, '2019-05-30'),
 ('Tom', 'IT', 62000, '2021-01-12');
+
 -- View All Employee Data
 -- =============================================
 select * from employees;
@@ -74,5 +77,5 @@ select department,count(*) as 'total_employees' from employees group by departme
 
 -- Example 8: Find Departments With More Than 2 Employees (With Conditions)
 -- =============================================
-select department, avg(salary) as 'average_salary', count(*) as 'total_employees' from employees where joining_date > '2017-07-10'  group by department having total_employees >
- 2 and average_salary > 55000;
+select department, avg(salary) as 'average_salary', count(*) as 'total_employees' from employees where joining_date >
+ '2017-07-10'  group by department having total_employees > 2 and average_salary > 55000;
