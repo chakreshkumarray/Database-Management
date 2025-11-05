@@ -11,6 +11,7 @@
 
 -- SECTION 1: Basic Primary Key Implementation
 -- Creating a table with a simple primary key
+
 create database PrimaryKeyDB;
 use PrimaryKeyDB;
 select database();
@@ -21,7 +22,9 @@ CREATE TABLE students (
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100)
 );
+
 -- Inserting records with valid primary keys
+
 INSERT INTO students (student_id, first_name, last_name, email)
 VALUES 
 (1, 'John', 'Smith', 'john.smith@example.com'),
@@ -31,12 +34,14 @@ VALUES
 select * from students;
 
 -- Demonstrating primary key constraint - This will fail
+
 INSERT INTO students (student_id, first_name, last_name, email)
 VALUES (1, 'Jane', 'Doe', 'jane.doe@example.com');
 -- Error Code: 1062. Duplicate entry '1' for key 'PRIMARY'
 
 -- SECTION 2: Auto-increment Primary Keys
 -- Creating a table with an auto-increment primary key
+
 CREATE TABLE products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(100) NOT NULL,
@@ -55,6 +60,7 @@ select * from products;
 
 -- SECTION 3: Adding Primary Keys to Existing Tables
 -- Creating a table with a primary key defined separately
+
 CREATE TABLE orders (
     order_id INT,
     customer_id INT,
@@ -76,6 +82,7 @@ ADD PRIMARY KEY (supplier_id);
 
 -- SECTION 4: Composite Primary Keys
 -- Creating a table with a composite primary key (multiple columns)
+
 CREATE TABLE enrollments (
     student_id INT,
     course_id INT,
@@ -95,5 +102,4 @@ VALUES
 -- This will fail - duplicate composite key (student_id + course_id)
 INSERT INTO enrollments (student_id, course_id, enrollment_date, grade)
 VALUES (1, 101, '2023-02-01', 'C');
--- Error: Duplicate entry '1-101' for key 'PRIMARY'
-
+-- Error: Duplicate entry '1-101' for key 'PRIMARY' Error 1062 --
