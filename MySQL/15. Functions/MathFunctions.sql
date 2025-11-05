@@ -1,6 +1,6 @@
--- =================
+-- ================= --
 -- NUMERIC FUNCTIONS
--- =================
+-- ================= --
 
 create database numericFunctionsDB;
 use numericFunctionsDB;
@@ -43,7 +43,8 @@ SELECT num_value, MOD(num_value, 3) AS remainder FROM numbers;
 SELECT num_value, SQRT(ABS(num_value)) AS sqrt_value FROM numbers;
 
 -- Exponential functions with handling for out-of-range values
-SELECT num_value,CASE WHEN num_value > 709 THEN 'Value too large for EXP()' ELSE EXP(num_value) END AS exp_value FROM numbers;
+SELECT num_value,CASE WHEN num_value > 709 THEN 'Value too large for EXP()' ELSE EXP(num_value) 
+END AS exp_value FROM numbers;
 
 -- Logarithmic functions
 select log(2,abs(num_value) + 1) ,log10(abs(num_value)+1),log2(num_value) from numbers;
