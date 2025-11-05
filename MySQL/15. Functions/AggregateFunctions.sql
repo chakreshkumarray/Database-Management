@@ -1,6 +1,6 @@
--- =================
+-- ================= --
 -- AGGREGATE FUNCTIONS
--- =================
+-- ================= --
 -- Used to perform calculations on multiple rows of data and return a single summarized value
 -- COUNT() – Returns the number of rows
 -- SUM() – Returns the sum of a numeric column
@@ -35,19 +35,19 @@ VALUES
 select * from employees;
 
 -- Count employees in HR department
-SELECT COUNT(*) AS hr_employee_count FROM employees WHERE department='HR';
+SELECT COUNT(*) FROM employees WHERE department = 'HR';
 
 -- Sum of salaries in HR department
-SELECT SUM(salary) AS total_hr_salary FROM employees WHERE department='HR';
+SELECT SUM(salary) FROM employees WHERE department = 'HR';
 
 -- Average salary in HR department
-SELECT AVG(salary) AS avg_hr_salary FROM employees WHERE department='HR';
+SELECT AVG(salary) FROM employees WHERE department = 'HR';
 
 -- Minimum salary in HR department
-SELECT MIN(salary) AS min_hr_salary FROM employees WHERE department='HR';
+SELECT MIN(salary) AS min_hr_salary FROM employees WHERE department = 'HR';
 
 -- Maximum salary in HR department
-SELECT MAX(salary) AS max_hr_salary FROM employees WHERE department='HR';
+SELECT MAX(salary) AS max_hr_salary FROM employees WHERE department = 'HR';
 
 -- Comprehensive statistics for all employees
 SELECT 
