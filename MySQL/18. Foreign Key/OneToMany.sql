@@ -1,4 +1,4 @@
--- 2. One-to-Many (1:N): Each record in Table A relates to multiple records in Table B
+-- 2. One-to-Many (1:N): Each record in Table A relates to multiple records in Table B --
 CREATE TABLE employees (
     employee_id INT NOT NULL,
     first_name VARCHAR(50) NOT NULL,
