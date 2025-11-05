@@ -1,4 +1,4 @@
--- 3. Many-to-Many (N:M): Multiple records in Table A relate to multiple records in Table B 
+-- 3. Many-to-Many (N:M): Multiple records in Table A relate to multiple records in Table B --
 -- Create Students table
 CREATE TABLE Students (
     student_id INT PRIMARY KEY,
