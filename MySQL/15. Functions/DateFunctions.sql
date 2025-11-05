@@ -1,6 +1,6 @@
--- =================
+-- ================= --
 -- DATE FUNCTIONS
--- =================
+-- ================= --
 
 -- Date and time data types:
 -- DATE	        YYYY-MM-DD           Stores only date without time
@@ -47,7 +47,8 @@ CREATE TABLE orders (
     order_date DATETIME
 );
 
-INSERT INTO orders (customer_name, order_date) VALUES
+INSERT INTO orders (customer_name, order_date) 
+VALUES
 ('Alice', '2025-03-01 10:15:00'),
 ('Bob', '2025-03-02 14:45:30'),
 ('Charlie', '2025-03-03 09:30:15'),
