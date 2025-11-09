@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6883ab59983e6a0b936a3b3c"
+  },
+  "name": "Ram",
+  "age": 1,
+  "IdCards": {
+    "hasPanCard": false,
+    "hasAdharCard": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6883ac6c983e6a0b936a3b3d"
+  },
+  "name": "ck",
+  "age": 23
+},
+{
+  "_id": {
+    "$oid": "6883aca5983e6a0b936a3b3e"
+  },
+  "name": "Ak",
+  "age": 21
+}]
