@@ -3,8 +3,8 @@
 -- First, Second, and Third Normal Forms using a bookstore database example.
 
 -- Create and use bookstore database
-CREATE DATABASE bookstore;
-USE bookstore;
+CREATE DATABASE bookstores;
+USE bookstores;
 
 -- Original denormalized table
 CREATE TABLE book_orders (
