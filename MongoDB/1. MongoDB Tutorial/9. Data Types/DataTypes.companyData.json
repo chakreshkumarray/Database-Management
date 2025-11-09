@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "6885ad8da0fce9b613fac168"
+  },
+  "name": "Amazon",
+  "isFunding": true,
+  "funding": 1691164131643,
+  "employees": [
+    {
+      "name": "Vipul",
+      "age": 23
+    },
+    {
+      "name": "Chakresh",
+      "age": 78
+    }
+  ],
+  "FoundedOn": {
+    "$date": "2025-07-27T04:39:41.347Z"
+  },
+  "FounedOnTimestamp": {
+    "$timestamp": {
+      "t": 1753591181,
+      "i": 1
+    }
+  }
+}]
