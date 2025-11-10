@@ -113,6 +113,9 @@ VALUES
     (4, 'Political'),
     (5, 'Mystery'),
     (6, 'Adventure');
+
+select * from categories;    
+    
 -- Create junction table for book-category many-to-many relationship
 CREATE TABLE book_categories (
     book_id INT,
@@ -130,6 +133,7 @@ VALUES
     (106, 1), (106, 5), -- Death on the Nile: Fiction, Mystery
     (107, 1), (107, 2), (107, 3), -- Emma: Fiction, Classic, Romance
     (108, 1), (108, 2), (108, 6); -- For Whom the Bell Tolls: Fiction, Classic, Adventure
+    
 select * from categories;
 select * from book_categories;
 
@@ -153,6 +157,7 @@ FROM books b
 INNER JOIN authors a ON b.author_id = a.author_id
                       AND b.publication_year < 1950
                       AND a.birth_year < 1900;
+                      
  -- Equivalent example with join condition in WHERE clause
 SELECT b.title, a.last_name
 FROM books b
