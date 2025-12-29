@@ -250,7 +250,7 @@ AND (oi.product_id, oi.quantity) IN
     (SELECT oi.product_id, oi.quantity FROM customers c
     JOIN orders o ON c.customer_id = o.customer_id
     JOIN order_items oi ON oi.order_id = o.order_id
-    WHERE c.state = 'CA');..
+    WHERE c.state = 'CA');
 
 -- Correlated Subqueries
 -- A correlated subquery is a subquery that uses values from the outer query. 
